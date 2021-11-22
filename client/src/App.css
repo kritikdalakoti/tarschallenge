@@ -1,0 +1,18 @@
+.page {
+  padding: 20px;
+}
+
+body{
+  margin: 0;
+}
+.App {
+    text-align: center;
+    /* min-height: 100vh; */
+    /* height: fit-content !important; */
+   
+  }
+
+.rowdis{
+  display: flex;
+  flex-direction: row;
+}
