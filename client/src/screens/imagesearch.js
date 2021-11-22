@@ -3,7 +3,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import Masonry from "react-masonry-component";
 import { masonryOptions } from "../exports";
 import { searchImages } from "../request";
-import { Modal, useTheme } from '@material-ui/core'
+import { Modal } from '@material-ui/core'
 import ImageDetail from './imagedetail';
 
 export default function ImageSearchPage() {

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { createApi } from 'unsplash-js';
-import { getImages } from "../request";
 import InfiniteScroll from "react-infinite-scroller";
 import Masonry from "react-masonry-component";
 import "../App.css";
 import { masonryOptions } from "../exports";
-import { Modal, useTheme } from '@material-ui/core'
+import { Modal } from '@material-ui/core'
 import ImageDetail from './imagedetail';
 import { accesskey } from '../config';
 
