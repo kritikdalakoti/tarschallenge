@@ -23,10 +23,9 @@ export default function ImageSearchPage() {
     }
     const searchAllImages = async (keyword, pg = 1) => {
         setSearching(true);
-        const res = await searchImages(keyword, page);
+        const res = await searchImages(keyword, pg);
         console.log(res)
         let imgs = res.response.results;
-        console.log(imgs)
         setImages(imgs);
         setTotal(res.response.total);
         setPage(pg);

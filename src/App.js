@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './screens/home';
 import ImageSearch from './screens/imagesearch';
-import { createBrowserHistory as createHistory } from "history";
 import TopBar from './screens/header'
 
 function App() {

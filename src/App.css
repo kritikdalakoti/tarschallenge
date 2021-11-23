@@ -16,3 +16,11 @@ body{
   display: flex;
   flex-direction: row;
 }
+
+.modal{
+  /* position: absolute; */
+    top: 25%;
+    margin: auto;
+}
+
+

@@ -28,10 +28,10 @@ export default function Home() {
     const handleClose = () => {
         setOpen(false);
     };
-    const getAllImages = async (pg = 1) => {
-        const result = await unsplash.photos.list({});
+    const getAllImages = async (pg = 1) => {    // function for getting all images from splash api
+        const result = await unsplash.photos.list({page:pg});
         console.log(result)
-        let imgs = images.concat(result.response.results);
+        let imgs = images.concat(result.response.results);   
         console.log(imgs)
         setImages(imgs);
         console.log(images)
@@ -51,7 +51,7 @@ export default function Home() {
 
 
     return (
-        <div className="page" >
+        <div  >
             <h1 className="text-center">Home</h1>
             <InfiniteScroll
                 pageStart={1}
@@ -68,12 +68,11 @@ export default function Home() {
                     {images.map((img, i) => {
                         console.log(img)
                         return (
-                            <div  style={{position:'relative'}} >
-                            <div  className="rowdis" key={i}>
+                            
+                            <div   key={i}>
                                 <img src={img.urls.thumb} style={{ width: 300, cursor:'pointer' }} onClick={()=>openModal(img)} />
                             </div>
-                            <div style={{position:'absolute'}} > Text</div>
-                            </div>
+                            
                         );
                     })}
                 </Masonry>
@@ -81,14 +80,21 @@ export default function Home() {
 
             {
                 show ?
-                    <div  >
+                    <div >
                         <Modal
                             open={open}
                             onClose={handleClose}
                             aria-labelledby="simple-modal-title"
                             aria-describedby="simple-modal-description"
+                            // className="modal"
+                            style={{top:'15%',margin:'auto',alignItems:'center',justifyContent:'center'}}
                         >
+                            <div >
                             <ImageDetail state={{image:img}} />
+                            </div>
+                            
+                            
+                            
                         </Modal>
                     </div>
                     :

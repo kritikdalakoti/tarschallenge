@@ -17,22 +17,19 @@ console.log(state)
                     <div className="coldis" >
                         <div className="rowdis" >
                         <span>Posted By :</span>
-                        <span style={{marginLeft:'7px'}} >{`${state.image.user.name}`}</span>
+                        <span className="svgf" >{`${state.image.user.name}`}</span>
                         </div>
                         <div className="coldis1" >
                         <span style={{whiteSpace:'nowrap'}} >{`Social Links of ${state.image.user.name} :`}</span>
-                        <span style={{marginLeft:'7px'}} >{`${state.image.user.portfolio_url}`?`${state.image.user.portfolio_url}`:'No Links'}</span>
+                        <span className="svgf" >{`${state.image.user.portfolio_url}`?`${state.image.user.portfolio_url}`:'No Links'}</span>
                         </div>
                         <div className="rowdis" >
                         <span>Likes :</span>
-                        <span style={{marginLeft:'7px'}} >{`${state.image.likes}`}</span>
+                        <span className="svgf" >{`${state.image.likes}`}</span>
                         </div>
                         <div className="coldis1" >
                         <span>{`Check ${state.image.user.name} instagram`}  :</span>
-                        <span style={{marginLeft:'7px'}} >{`${state.image.user.instagram_username}`}</span>
-                        </div>
-                        <div className="rowdis" >
-                            
+                        <span className="svgf" >{`${state.image.user.instagram_username}`}</span>
                         </div>
                     </div>
                 </div>
